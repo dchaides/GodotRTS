@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4mhp2d5cccr5"]
+
+[ext_resource type="Script" path="res://Scenes/FoodGatherer.cs" id="1_dom3m"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dh5fv"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_48ibv"]
+
+[node name="OrchardWorker" type="CharacterBody3D"]
+script = ExtResource("1_dom3m")
+resourceGenerationAmount = 4
+walkSpeed = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_dh5fv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_48ibv")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.78869, 0)
+pixel_size = 0.05
+billboard = 1
+modulate = Color(0, 0, 0, 1)
+text = "test"

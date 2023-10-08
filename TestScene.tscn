@@ -1,0 +1,463 @@
+[gd_scene load_steps=16 format=3 uid="uid://b1a8xbe4konf7"]
+
+[ext_resource type="Script" path="res://Camera.cs" id="1_ldhwk"]
+[ext_resource type="Script" path="res://InterfaceManager.cs" id="2_oa2or"]
+[ext_resource type="Script" path="res://Market.cs" id="3_rm4be"]
+[ext_resource type="Script" path="res://MouseArea2D.cs" id="4_qkdgs"]
+[ext_resource type="PackedScene" uid="uid://bt8wyftdb7nlt" path="res://Assets/CastleKeep.tscn" id="5_x3kml"]
+
+[sub_resource type="Environment" id="Environment_e6xdf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5bth6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sne5j"]
+size = Vector2(1173, 161)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d15as"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_bdnjg"]
+vertices = PackedVector3Array(-43.5, 0.5, -49.5, -49.5, 0.5, -49.5, -49.5, 0.5, -42.75, -37.25, 0.5, -49.5, -43.5, 0.5, -49.5, -49.5, 0.5, -42.75, -37.25, 0.5, -49.5, -49.5, 0.5, -42.75, -49.5, 0.5, -36, -31, 0.5, -49.5, -49.5, 0.5, -15.75, -49.5, 0.5, -9, 0, 0.5, 4, -6.25, 0.5, -49.5, -12.5, 0.5, -49.5, -31, 0.5, -49.5, -49.5, 0.5, -36, -49.5, 0.5, -29.25, -24.75, 0.5, -49.5, -49.5, 0.5, -2.25, -0.75, 0.5, 4, 0, 0.5, 4, -49.5, 0.5, -9, -24.75, 0.5, -49.5, -49.5, 0.5, -29.25, -49.5, 0.5, -22.5, -18.75, 0.5, -49.5, 0, 0.5, 4, 0, 0.5, -49.5, -6.25, 0.5, -49.5, -18.75, 0.5, -49.5, -49.5, 0.5, -22.5, -49.5, 0.5, -15.75, -12.5, 0.5, -49.5, -49.5, 0.5, 4.5, -1, 0.5, 4.5, -0.75, 0.5, 4, -49.5, 0.5, -2.25, 49.5, 0.5, -42.75, 49.5, 0.5, -49.5, 43.25, 0.5, -49.5, 49.5, 0.5, -42.75, 43.25, 0.5, -49.5, 37, 0.5, -49.5, 49.5, 0.5, -36, 49.5, 0.5, -42.75, 37, 0.5, -49.5, 30.75, 0.5, -49.5, 0, 0.5, 4, 49.5, 0.5, -9, 49.5, 0.5, -15.75, 12.25, 0.5, -49.5, 6, 0.5, -49.5, 49.5, 0.5, -29.25, 49.5, 0.5, -36, 30.75, 0.5, -49.5, 24.75, 0.5, -49.5, 0, 0.5, 4, 0.75, 0.5, 4, 49.5, 0.5, -2.25, 49.5, 0.5, -9, 49.5, 0.5, -22.5, 49.5, 0.5, -29.25, 24.75, 0.5, -49.5, 18.5, 0.5, -49.5, 6, 0.5, -49.5, 0, 0.5, -49.5, 0, 0.5, 4, 49.5, 0.5, -15.75, 49.5, 0.5, -22.5, 18.5, 0.5, -49.5, 12.25, 0.5, -49.5, 0.75, 0.5, 4, 1, 0.5, 4.5, 49.5, 0.5, 4.5, 49.5, 0.5, -2.25, -1, 0.5, 9.75, 0, 0.5, 9.25, 0, 0.5, 9, -1, 0.5, 8.5, -49.5, 0.5, 11, -49.5, 0.5, 11, -1, 0.5, 8.5, -1, 0.5, 7, -49.5, 0.5, 4.5, -1, 0.5, 7, 0, 0.5, 6.75, 0, 0.5, 6.25, -1, 0.5, 6, -49.5, 0.5, 4.5, -1, 0.5, 6, -1, 0.5, 4.5, -49.5, 0.5, 4.5, -49.5, 0.5, 11, -1, 0.5, 11, -1, 0.5, 9.75, 1, 0.5, 6, 0, 0.5, 6.25, 0, 0.5, 6.75, 1, 0.5, 7, 49.5, 0.5, 4.5, 1, 0.5, 7, 1, 0.5, 8.5, 49.5, 0.5, 11, 49.5, 0.5, 4.5, 1, 0.5, 8.5, 0, 0.5, 9, 0, 0.5, 9.25, 1, 0.5, 9.75, 49.5, 0.5, 11, 49.5, 0.5, 4.5, 1, 0.5, 4.5, 1, 0.5, 6, 1, 0.5, 9.75, 1, 0.5, 11, 49.5, 0.5, 11, -49.5, 0.5, 39.75, -49.5, 0.5, 49.5, -43.5, 0.5, 49.5, -49.5, 0.5, 39.75, -43.5, 0.5, 49.5, -37.25, 0.5, 49.5, -49.5, 0.5, 39.75, -37.25, 0.5, 49.5, -31, 0.5, 49.5, -49.5, 0.5, 39.75, -31, 0.5, 49.5, -24.75, 0.5, 49.5, -49.5, 0.5, 30.25, -49.5, 0.5, 39.75, -24.75, 0.5, 49.5, -18.75, 0.5, 49.5, -6.25, 0.5, 49.5, -0.75, 0.5, 11.5, -1, 0.5, 11, -49.5, 0.5, 11, -49.5, 0.5, 20.5, -12.5, 0.5, 49.5, 0, 0.5, 49.5, 0, 0.5, 11.5, -0.75, 0.5, 11.5, -6.25, 0.5, 49.5, -49.5, 0.5, 30.25, -18.75, 0.5, 49.5, -12.5, 0.5, 49.5, -49.5, 0.5, 20.5, 43.25, 0.5, 49.5, 49.5, 0.5, 49.5, 49.5, 0.5, 39.75, 37, 0.5, 49.5, 43.25, 0.5, 49.5, 49.5, 0.5, 39.75, 30.75, 0.5, 49.5, 37, 0.5, 49.5, 49.5, 0.5, 39.75, 24.75, 0.5, 49.5, 30.75, 0.5, 49.5, 49.5, 0.5, 39.75, 24.75, 0.5, 49.5, 49.5, 0.5, 39.75, 49.5, 0.5, 30.25, 18.5, 0.5, 49.5, 1, 0.5, 11, 0.75, 0.5, 11.5, 6, 0.5, 49.5, 12.25, 0.5, 49.5, 49.5, 0.5, 20.5, 49.5, 0.5, 11, 0.75, 0.5, 11.5, 0, 0.5, 11.5, 0, 0.5, 49.5, 6, 0.5, 49.5, 12.25, 0.5, 49.5, 18.5, 0.5, 49.5, 49.5, 0.5, 30.25, 49.5, 0.5, 20.5)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(14, 13, 10), PackedInt32Array(10, 13, 11), PackedInt32Array(11, 13, 12), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 18), PackedInt32Array(20, 19, 21), PackedInt32Array(21, 19, 22), PackedInt32Array(23, 26, 24), PackedInt32Array(24, 26, 25), PackedInt32Array(29, 28, 27), PackedInt32Array(30, 33, 31), PackedInt32Array(31, 33, 32), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 37), PackedInt32Array(40, 39, 38), PackedInt32Array(43, 42, 41), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 47), PackedInt32Array(49, 48, 50), PackedInt32Array(50, 48, 51), PackedInt32Array(51, 48, 52), PackedInt32Array(55, 54, 56), PackedInt32Array(56, 54, 53), PackedInt32Array(58, 57, 59), PackedInt32Array(59, 57, 60), PackedInt32Array(63, 62, 64), PackedInt32Array(64, 62, 61), PackedInt32Array(67, 66, 65), PackedInt32Array(70, 69, 71), PackedInt32Array(71, 69, 68), PackedInt32Array(73, 72, 74), PackedInt32Array(74, 72, 75), PackedInt32Array(77, 76, 78), PackedInt32Array(78, 76, 79), PackedInt32Array(79, 76, 80), PackedInt32Array(82, 81, 83), PackedInt32Array(83, 81, 84), PackedInt32Array(86, 85, 87), PackedInt32Array(87, 85, 88), PackedInt32Array(88, 85, 89), PackedInt32Array(92, 91, 90), PackedInt32Array(95, 94, 93), PackedInt32Array(97, 96, 98), PackedInt32Array(98, 96, 99), PackedInt32Array(99, 96, 100), PackedInt32Array(101, 104, 102), PackedInt32Array(102, 104, 103), PackedInt32Array(106, 105, 107), PackedInt32Array(107, 105, 108), PackedInt32Array(108, 105, 109), PackedInt32Array(112, 111, 110), PackedInt32Array(115, 114, 113), PackedInt32Array(118, 117, 116), PackedInt32Array(121, 120, 119), PackedInt32Array(124, 123, 122), PackedInt32Array(127, 126, 125), PackedInt32Array(130, 129, 131), PackedInt32Array(131, 129, 128), PackedInt32Array(133, 132, 134), PackedInt32Array(134, 132, 137), PackedInt32Array(134, 137, 136), PackedInt32Array(134, 136, 135), PackedInt32Array(139, 138, 140), PackedInt32Array(140, 138, 141), PackedInt32Array(143, 142, 144), PackedInt32Array(144, 142, 145), PackedInt32Array(148, 147, 146), PackedInt32Array(151, 150, 149), PackedInt32Array(154, 153, 152), PackedInt32Array(157, 156, 155), PackedInt32Array(158, 161, 159), PackedInt32Array(159, 161, 160), PackedInt32Array(163, 162, 164), PackedInt32Array(164, 162, 165), PackedInt32Array(165, 162, 166), PackedInt32Array(166, 162, 167), PackedInt32Array(169, 168, 170), PackedInt32Array(170, 168, 171), PackedInt32Array(173, 172, 174), PackedInt32Array(174, 172, 175)]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_avlsu"]
+size = Vector2(100, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xuje7"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r6tnn"]
+height = 10.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xji7o"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_khnxp"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_e6xdf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_5bth6")
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("1_ldhwk")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 10, 10)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -142.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_oa2or")
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 142.0
+
+[node name="TabContainer" type="TabContainer" parent="Control"]
+layout_mode = 0
+offset_left = 225.0
+offset_right = 1095.0
+offset_bottom = 142.0
+
+[node name="Industry" type="HBoxContainer" parent="Control/TabContainer"]
+layout_mode = 2
+
+[node name="BuildStockpile" type="Button" parent="Control/TabContainer/Industry"]
+layout_mode = 2
+text = "Stockpile
+"
+
+[node name="BuildWoodCutterButton" type="Button" parent="Control/TabContainer/Industry"]
+layout_mode = 2
+text = "WoodCutters"
+
+[node name="BuildStoneCutterButton" type="Button" parent="Control/TabContainer/Industry"]
+layout_mode = 2
+text = "StoneCutters"
+
+[node name="BuildIronWorkerButton" type="Button" parent="Control/TabContainer/Industry"]
+layout_mode = 2
+text = "Iron Smelter"
+
+[node name="Food" type="HBoxContainer" parent="Control/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="BuildGranaryButton" type="Button" parent="Control/TabContainer/Food"]
+layout_mode = 2
+text = "Granary"
+
+[node name="BuildOrchardButton" type="Button" parent="Control/TabContainer/Food"]
+layout_mode = 2
+text = "Orchard"
+
+[node name="Living" type="HBoxContainer" parent="Control/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="BuildHouseButton" type="Button" parent="Control/TabContainer/Living"]
+visible = false
+layout_mode = 2
+text = "House"
+
+[node name="Walls" type="HBoxContainer" parent="Control/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="BuildWallButton" type="Button" parent="Control/TabContainer/Walls"]
+layout_mode = 2
+text = "Wall"
+
+[node name="BuildWallCorner" type="Button" parent="Control/TabContainer/Walls"]
+layout_mode = 2
+text = "Corner"
+
+[node name="BuildGate" type="Button" parent="Control/TabContainer/Walls"]
+layout_mode = 2
+text = "Gate"
+
+[node name="Economy" type="HBoxContainer" parent="Control/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Control/TabContainer/Economy"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/TabContainer/Economy/Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 31.0
+offset_right = 53.0
+offset_bottom = 57.0
+text = "Taxes	"
+
+[node name="IncreaseTaxes" type="Button" parent="Control/TabContainer/Economy/Control/Label"]
+layout_mode = 0
+offset_left = 102.0
+offset_right = 128.0
+offset_bottom = 31.0
+text = "+"
+
+[node name="DecreaseTaxes" type="Button" parent="Control/TabContainer/Economy/Control/Label"]
+layout_mode = 0
+offset_left = 134.0
+offset_right = 161.0
+offset_bottom = 31.0
+text = "-"
+
+[node name="TaxRate" type="Label" parent="Control/TabContainer/Economy/Control"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 31.0
+offset_right = 111.0
+offset_bottom = 54.0
+text = "2%"
+
+[node name="Market" type="HBoxContainer" parent="Control/TabContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("3_rm4be")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/Market"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TabContainer/Market/VBoxContainer"]
+layout_mode = 2
+
+[node name="FoodLabel" type="Label" parent="Control/TabContainer/Market/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Food: "
+
+[node name="FoodValue" type="Label" parent="Control/TabContainer/Market/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "100"
+
+[node name="SellFood" type="Button" parent="Control/TabContainer/Market/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Sell"
+
+[node name="BuyFood" type="Button" parent="Control/TabContainer/Market/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Buy"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/TabContainer/Market/VBoxContainer"]
+layout_mode = 2
+
+[node name="IronLabel" type="Label" parent="Control/TabContainer/Market/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Iron: "
+
+[node name="IronValue" type="Label" parent="Control/TabContainer/Market/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "100"
+
+[node name="SellIron" type="Button" parent="Control/TabContainer/Market/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Sell"
+
+[node name="BuyIron" type="Button" parent="Control/TabContainer/Market/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Buy"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/TabContainer/Market"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TabContainer/Market/VBoxContainer2"]
+layout_mode = 2
+
+[node name="StoneLabel" type="Label" parent="Control/TabContainer/Market/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Stone: "
+
+[node name="StoneValue" type="Label" parent="Control/TabContainer/Market/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "100"
+
+[node name="SellStone" type="Button" parent="Control/TabContainer/Market/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Sell"
+
+[node name="BuyStone" type="Button" parent="Control/TabContainer/Market/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Buy"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/TabContainer/Market/VBoxContainer2"]
+layout_mode = 2
+
+[node name="WoodLabel" type="Label" parent="Control/TabContainer/Market/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Wood:"
+
+[node name="WoodValue" type="Label" parent="Control/TabContainer/Market/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "100"
+
+[node name="SellWood" type="Button" parent="Control/TabContainer/Market/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Sell"
+
+[node name="BuyWood" type="Button" parent="Control/TabContainer/Market/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Buy"
+
+[node name="Area2D" type="Area2D" parent="Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D"]
+position = Vector2(576.5, 70.5)
+shape = SubResource("RectangleShape2D_sne5j")
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 225.0
+offset_bottom = 71.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Control"]
+layout_mode = 0
+offset_right = 93.0
+offset_bottom = 146.0
+
+[node name="Wood" type="Label" parent="Control/Control/VBoxContainer"]
+layout_mode = 2
+text = "Wood:"
+
+[node name="WoodValue" type="Label" parent="Control/Control/VBoxContainer/Wood"]
+layout_mode = 0
+offset_left = 52.0
+offset_right = 93.0
+offset_bottom = 26.0
+text = "100"
+
+[node name="Stone" type="Label" parent="Control/Control/VBoxContainer"]
+layout_mode = 2
+text = "Stone	:"
+
+[node name="StoneValue" type="Label" parent="Control/Control/VBoxContainer/Stone"]
+layout_mode = 0
+offset_left = 52.0
+offset_right = 93.0
+offset_bottom = 26.0
+text = "100"
+
+[node name="Iron" type="Label" parent="Control/Control/VBoxContainer"]
+layout_mode = 2
+text = "Iron:"
+
+[node name="IronValue" type="Label" parent="Control/Control/VBoxContainer/Iron"]
+layout_mode = 0
+offset_left = 52.0
+offset_right = 93.0
+offset_bottom = 26.0
+text = "100"
+
+[node name="Food" type="Label" parent="Control/Control/VBoxContainer"]
+layout_mode = 2
+text = "Food:"
+
+[node name="FoodValue" type="Label" parent="Control/Control/VBoxContainer/Food"]
+layout_mode = 0
+offset_left = 52.0
+offset_right = 93.0
+offset_bottom = 26.0
+text = "100"
+
+[node name="Gold" type="Label" parent="Control/Control/VBoxContainer"]
+layout_mode = 2
+text = "Gold:"
+
+[node name="GoldValue" type="Label" parent="Control/Control/VBoxContainer/Gold"]
+layout_mode = 0
+offset_left = 52.0
+offset_right = 93.0
+offset_bottom = 26.0
+text = "100"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/Control"]
+layout_mode = 0
+offset_left = 124.0
+offset_right = 217.0
+offset_bottom = 146.0
+
+[node name="Pop" type="Label" parent="Control/Control/VBoxContainer2"]
+layout_mode = 2
+text = "Pop:"
+
+[node name="PopValue" type="Label" parent="Control/Control/VBoxContainer2/Pop"]
+layout_mode = 0
+offset_left = 65.0
+offset_right = 101.0
+offset_bottom = 26.0
+text = "1/20"
+
+[node name="Hap" type="Label" parent="Control/Control/VBoxContainer2"]
+layout_mode = 2
+text = "Hap	:"
+
+[node name="HapValue" type="Label" parent="Control/Control/VBoxContainer2/Hap"]
+layout_mode = 0
+offset_left = 65.0
+offset_right = 101.0
+offset_bottom = 26.0
+text = "10"
+
+[node name="DestroyMode" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -52.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "D"
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_qkdgs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_d15as")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." groups=["NavRegion"]]
+navigation_mesh = SubResource("NavigationMesh_bdnjg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
+mesh = SubResource("PlaneMesh_avlsu")
+skeleton = NodePath("../..")
+
+[node name="TestFloor" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/TestFloor"]
+shape = SubResource("ConcavePolygonShape3D_xuje7")
+
+[node name="Tree" type="MeshInstance3D" parent="NavigationRegion3D" groups=["wood"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.15471)
+mesh = SubResource("CylinderMesh_r6tnn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Tree"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Tree/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xji7o")
+
+[node name="Tree2" type="MeshInstance3D" parent="NavigationRegion3D" groups=["wood"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.80683)
+mesh = SubResource("CylinderMesh_r6tnn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Tree2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Tree2/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xji7o")
+
+[node name="Tree3" type="MeshInstance3D" parent="NavigationRegion3D" groups=["wood"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.491)
+mesh = SubResource("CylinderMesh_r6tnn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Tree3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Tree3/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xji7o")
+
+[node name="StonePile" type="MeshInstance3D" parent="NavigationRegion3D" groups=["stone"]]
+transform = Transform3D(1.68469, 0, 0, 0, 0.065684, 0, 0, 0, 1.55982, 5.70873, 1.0163, 6.61718)
+mesh = SubResource("CylinderMesh_r6tnn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/StonePile"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/StonePile/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xji7o")
+
+[node name="CastleKeep" parent="." instance=ExtResource("5_x3kml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CastleKeep"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
+mesh = SubResource("BoxMesh_khnxp")
+
+[node name="Marker3D" type="Marker3D" parent="CastleKeep/MeshInstance3D" groups=["CitizenSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="CastleKeep/MeshInstance3D" groups=["CitizenSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Marker3D3" type="Marker3D" parent="CastleKeep/MeshInstance3D" groups=["CitizenSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Marker3D4" type="Marker3D" parent="CastleKeep/MeshInstance3D" groups=["CitizenSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[connection signal="button_down" from="Control/TabContainer/Industry/BuildStockpile" to="Control" method="_on_build_stockpile_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Industry/BuildWoodCutterButton" to="Control" method="_on_build_wood_cutter_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Industry/BuildStoneCutterButton" to="Control" method="_on_build_stone_cutter_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Industry/BuildIronWorkerButton" to="Control" method="_on_build_iron_smelter_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Food/BuildGranaryButton" to="Control" method="_on_build_Granery_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Food/BuildOrchardButton" to="Control" method="_on_build_orchard_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Living/BuildHouseButton" to="Control" method="_on_build_house_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Walls/BuildWallButton" to="Control" method="_on_build_wall_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Walls/BuildWallCorner" to="Control" method="_on_build_wall_corner_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Walls/BuildGate" to="Control" method="_on_build_gate_button_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Economy/Control/Label/IncreaseTaxes" to="Control" method="_on_IncreaseTaxes_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Economy/Control/Label/DecreaseTaxes" to="Control" method="_on_DecreaseTaxes_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Market/VBoxContainer/HBoxContainer/SellFood" to="Control/TabContainer/Market" method="_on_SellFood_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Market/VBoxContainer/HBoxContainer/BuyFood" to="Control/TabContainer/Market" method="_on_BuyFood_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Market/VBoxContainer/HBoxContainer2/SellIron" to="Control/TabContainer/Market" method="_on_SellIron_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Market/VBoxContainer/HBoxContainer2/BuyIron" to="Control/TabContainer/Market" method="_on_BuyIron_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Market/VBoxContainer2/HBoxContainer/SellStone" to="Control/TabContainer/Market" method="_on_SellStone_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Market/VBoxContainer2/HBoxContainer/BuyStone" to="Control/TabContainer/Market" method="_on_BuyStone_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Market/VBoxContainer2/HBoxContainer2/SellWood" to="Control/TabContainer/Market" method="_on_SellWood_button_down"]
+[connection signal="button_down" from="Control/TabContainer/Market/VBoxContainer2/HBoxContainer2/BuyWood" to="Control/TabContainer/Market" method="_on_BuyWood_button_down"]
+[connection signal="area_entered" from="Control/Area2D" to="Control" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Control/Area2D" to="Control" method="_on_area_2d_area_exited"]
+[connection signal="button_down" from="Control/DestroyMode" to="Control" method="_on_DestroyMode_button_down"]

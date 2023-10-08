@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chfhw7hxug4gs"
+path="res://.godot/imported/wallNarrowCorner.obj-c6789d7e656ff413fa06657c2fe033fe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallNarrowCorner.obj-c6789d7e656ff413fa06657c2fe033fe.mesh"]
+
+source_file="res://Assets/Wall/wallNarrowCorner.obj"
+dest_files=["res://.godot/imported/wallNarrowCorner.obj-c6789d7e656ff413fa06657c2fe033fe.mesh", "res://.godot/imported/wallNarrowCorner.obj-c6789d7e656ff413fa06657c2fe033fe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

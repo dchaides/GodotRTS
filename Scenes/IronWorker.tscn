@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwwa4ot1o3nb"]
+
+[ext_resource type="Script" path="res://Scenes/ResourceGatherer.cs" id="1_p8ss6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dh5fv"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_48ibv"]
+
+[node name="WoodCutter" type="CharacterBody3D"]
+script = ExtResource("1_p8ss6")
+resourceGenerationAmount = 5
+resourceToGet = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_dh5fv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_48ibv")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.78869, 0)
+pixel_size = 0.05
+billboard = 1
+modulate = Color(0, 0, 0, 1)
+text = "test"
